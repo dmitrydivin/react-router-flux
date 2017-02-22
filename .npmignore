@@ -1,0 +1,8 @@
+.idea
+.npmignore
+.gitignore
+.babelrc
+src
+node_modules
+npm-debug.log
+coverage

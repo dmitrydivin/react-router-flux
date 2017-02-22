@@ -1,0 +1,49 @@
+{
+  "name": "react-router-flux",
+  "version": "1.0.0",
+  "description": "Powerful extension for react-router to declare routes.",
+  "scripts": {
+    "build": "npm run build-cjs && npm run build-es",
+    "build-cjs": "rimraf lib && cross-env BABEL_ENV=cjs babel ./src -d lib --ignore __tests__",
+    "build-es": "rimraf es && cross-env BABEL_ENV=es babel ./src -d es --ignore __tests__",
+    "test": "mocha --compilers js:babel-core/register --require jsdom-global/register --colors --bail --recursive --reporter spec src",
+    "test:cov": "istanbul cover _mocha -- --compilers js:babel-core/register --require jsdom-global/register --colors --bail --recursive --reporter spec src",
+    "prepublish": "npm run build"
+  },
+  "author": "Dmitry Divin",
+  "email": "divin.dmitry@gmail.com",
+  "license": "MIT",
+  "main": "lib/index",
+  "jsnext:main": "es/index",
+  "fiels": [
+    "*.md",
+    "lib",
+    "es"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitrydivin/react-router-flux.git"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.14.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-react": "6.5.0",
+    "babel-preset-stage-0": "6.5.0",
+    "cross-env": "^3.1.4",
+    "expect": "^1.20.2",
+    "istanbul": "1.0.0-alpha.2",
+    "jsdom": "9.8.3",
+    "jsdom-global": "^2.1.1",
+    "mocha": "^3.1.2",
+    "react-dom": "^15.4.2",
+    "rimraf": "^2.5.4"
+  },
+  "dependencies": {
+    "invariant": "^2.2.1",
+    "lodash": "^4.15.0",
+    "react": "^15.4.2",
+    "react-router": "^v3.0.1"
+  }
+}
