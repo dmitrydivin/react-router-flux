@@ -31,7 +31,7 @@ var Input = require('react-router-flux').Input;
 
 ### Props
 | Property | Type         | Required | Description       |
-|----------|--------------|----------|:------------------|
+|:---------|:-------------|:---------|:------------------|
 |component | `ReactClass` | yes      | A React component |
 
 ### Declare view-state
@@ -70,17 +70,19 @@ The declaration can define in a View inside and in a Dispatcher too, but as defa
 The declaration can define in Dispatcher inside only
 
 ```javascript
-<Action on={String} to={String} query={Function|Object} state={Function|Object} params={Function|Object}/>
+<Action on={String} to={String} query={Function|Object} 
+                                state={Function|Object} 
+                                params={Function|Object}/>
 ```
 
 ### Props
- | Property | Type                   | Required | Description                              |
- |----------|------------------------|----------|:-----------------------------------------|
- |on        | `String`               | yes      | Event ID of the component                |
- |to        | `String`               | yes      | Destination path                         |
- |query     | `Function` or `Object` | no       | Define query params for destination path |
- |state     | `Function` or `Object` | no       | Define route state                       |
- |params    | `Function` or `Object` | no       | Define params for destination path       |
+| Property | Type                   | Required | Description                              |
+|:---------|:-----------------------|:---------|:-----------------------------------------|
+|on        | `String`               | yes      | Event ID of the component                |
+|to        | `String`               | yes      | Redirect Route path                      |
+|query     | `Function` or `Object` | no       | Define query params for the Route path   |
+|state     | `Function` or `Object` | no       | Define route state for the Router        |
+|params    | `Function` or `Object` | no       | Define params for the Route path         |
 
 
 ### How Does It Use?
